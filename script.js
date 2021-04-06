@@ -14,12 +14,12 @@ document.getElementById('multiplier').addEventListener('click', multiply)
 // event listener for WIN img/button
 document.getElementById('win').addEventListener('click', win)
 // adds points to the score when button is clicked then displays the curent score
-function clicked() {
-score = score + cp * multiplier
-document.getElementById('points').innerHTML = score
+function clicked () {
+  score = score + cp * multiplier
+  document.getElementById('points').innerHTML = score
 }
 // detects if the user have enuff points for an upgrade if you do lowers your points then increases points per click by 1 and then increses the price for future upgrades if you dont have enugf points it alerts the user then stops
-function upgrade() {
+function upgrade () {
   if (score >= upgradeprice) {
     score = score - upgradeprice
     upgradenum = upgradenum + 1
@@ -29,11 +29,11 @@ function upgrade() {
     document.getElementById('upprice').innerHTML = upgradeprice
     document.getElementById('points').innerHTML = score
   } else {
-    alert("not enuff clicks!")
+    alert('not enuff clicks!')
   }
 }
 // detects if the user have enuff points if you do it multiplies your points per click then increases its price, if you dont have enuff points it alerts the user
-function multiply() {
+function multiply () {
   if (score >= mulprice) {
     score = score - mulprice
     multiplier = multiplier + 1
@@ -42,15 +42,15 @@ function multiply() {
     document.getElementById('mulprice').innerHTML = mulprice
     document.getElementById('points').innerHTML = score
   } else {
-      alert("not enuff clicks!")
+    alert('not enuff clicks!')
   }
 }
 // detects if the user has enugf points if yes shows the end screen, if not alerts the user
-function win() {
+function win () {
   if (score >= 5000) {
     score = score - 5000
-    document.getElementById('planet').src = "/images/Winner.png"
-    } else {
-      alert("you arent gonna win that easily, get more points then try again")
-    }
+    document.getElementById('planet').src = '/images/Winner.png'
+  } else {
+      alert('you arent gonna win that easily, get more points then try again')
+  }
 }
