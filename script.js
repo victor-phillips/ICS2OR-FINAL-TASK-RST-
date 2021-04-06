@@ -13,7 +13,7 @@ document.getElementById('upgrade').addEventListener('click', upgrade)
 document.getElementById('multiplier').addEventListener('click', multiply)
 // event listener for WIN img/button
 document.getElementById('win').addEventListener('click', win)
-// adds points to the score when button is clicked then displays the curent score
+// adds points to the score when button is clicked based on cp (click points) and multiplyer  then displays the curent score
 function clicked () {
   score = score + cp * multiplier
   document.getElementById('points').innerHTML = score
