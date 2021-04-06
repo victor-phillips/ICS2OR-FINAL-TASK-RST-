@@ -45,7 +45,7 @@ function multiply () {
     alert('not enuff clicks!')
   }
 }
-// detects if the user has enugf points if yes shows the end screen, if not alerts the user
+// detects if the user has enuff points if yes shows the end screen, if not alerts the user
 function win () {
   if (score >= 5000) {
     score = score - 5000
