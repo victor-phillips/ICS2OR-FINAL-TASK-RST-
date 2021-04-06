@@ -3,10 +3,35 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
-    <title>repl.it</title>
+    <title>planet clicker</title>
     <link href="style.css" rel="stylesheet" type="text/css" />
   </head>
-  <body>
+  <body style="background-color:MidnightBlue">
+    <img src="/images/stars.png" alt="image of stars" class="stars1">
+    <img src="/images/stars.png" alt="image of stars" class="stars2">
+    <h1 id="points" class="points">
+      0
+    </h1>
+    <button id="clicker" class="clicker">
+      <img class="planet" id="planet" src="/images/planet.png" alt="a planet (click me)">
+    </button>
+    <button id="win" class="win">
+      <img class="winimg" src="/images/Win.png" alt="WIN 5000 points">
+    </button>
+    <img src="/images/stars.png" alt="image of stars" class="stars3">
+    <button id="upgrade" class="upgrade">
+      upgrade points per click
+      <p id="upprice">
+        100
+      </p>
+    </button>
+    <img src="/images/stars.png" alt="image of stars" class="stars4">
+        <button id="multiplier" class="multiplier">
+      upgrade your click multilier
+      <p id="mulprice">
+        500
+      </p>
+    </button>
     <script src="script.js"></script>
   </body>
 </html>
