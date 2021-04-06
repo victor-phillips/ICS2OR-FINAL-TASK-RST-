@@ -5,6 +5,7 @@ let upgradeprice = 100
 let upgradenum = 1
 let multiplier = 1
 let mulprice = 500
+const inc = 1
 // event listener for clicking
 document.getElementById('clicker').addEventListener('click', clicked)
 // event listener for upgrade
@@ -22,8 +23,8 @@ function clicked () {
 function upgrade () {
   if (score >= upgradeprice) {
     score = score - upgradeprice
-    upgradenum = upgradenum + 1
-    cp = cp + 1
+    upgradenum = upgradenum + inc
+    cp = cp + inc
     upgradeprice = upgradeprice + 25
     upgradeprice = upgradeprice * upgradenum
     document.getElementById('upprice').innerHTML = upgradeprice
@@ -36,7 +37,7 @@ function upgrade () {
 function multiply () {
   if (score >= mulprice) {
     score = score - mulprice
-    multiplier = multiplier + 1
+    multiplier = multiplier + inc
     mulprice = mulprice + 50
     mulprice = mulprice * multiplier
     document.getElementById('mulprice').innerHTML = mulprice
