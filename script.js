@@ -51,6 +51,6 @@ function win () {
     score = score - 5000
     document.getElementById('planet').src = '/images/Winner.png'
   } else {
-      alert('you arent gonna win that easily, get more points then try again')
+    alert('you arent gonna win that easily, get more points then try again')
   }
 }
