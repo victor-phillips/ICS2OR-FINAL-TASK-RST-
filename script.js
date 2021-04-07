@@ -6,6 +6,7 @@ let upgradenum = 1
 let multiplier = 1
 let mulprice = 500
 const inc = 1
+let capacity = 2000
 // event listener for clicking
 document.getElementById('clicker').addEventListener('click', clicked)
 // event listener for upgrade
@@ -14,6 +15,10 @@ document.getElementById('upgrade').addEventListener('click', upgrade)
 document.getElementById('multiplier').addEventListener('click', multiply)
 // event listener for WIN img/button
 document.getElementById('win').addEventListener('click', win)
+// event listen for capacity button
+document.getElementById('capbutton').addEventListener('click', cap)
+// activates capacity chercker loop every second
+setInterval(capcheck, 1000)
 // adds points to the score when button is clicked based on cp (click points) and multiplyer  then displays the curent score
 function clicked () {
   score = score + cp * multiplier
@@ -53,5 +58,26 @@ function win () {
     document.getElementById('planet').src = '/images/Winner.png'
   } else {
     alert('you arent gonna win that easily, get more points then try again')
+  }
+}
+// function to upgrade your capacity
+function cap () {
+  if (score >= capacity) {
+    score = score - capacity
+    capacity = capacity + 1000
+    document.getElementById('points').innerHTML = score
+    document.getElementById('cap').innerHTML = capacity
+    document.getElementById('capprice').innerHTML = capacity
+  } else {
+    alert('not enuff clicks!')
+  }
+}
+// a loop that constantly cheks if the score is over the capacity and doesent allow you to go above your capacity
+function capcheck () {
+  for (i = 0; i < 1; i++) {
+    if (score > capacity) {
+      score = capacity
+      document.getElementById('points').innerHTML = score
+    }
   }
 }
