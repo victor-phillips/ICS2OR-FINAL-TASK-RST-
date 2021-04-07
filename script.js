@@ -17,14 +17,14 @@ document.getElementById('multiplier').addEventListener('click', multiply)
 document.getElementById('win').addEventListener('click', win)
 // event listen for capacity button
 document.getElementById('capbutton').addEventListener('click', cap)
-// activates capacity chercker loop every second
+// activates capacity checker loop every second
 setInterval(capcheck, 1000)
-// adds points to the score when button is clicked based on cp (click points) and multiplyer  then displays the curent score
+// adds points to the score when button is clicked based on cp (click points) and multiplyer  then displays the current score
 function clicked () {
   score = score + cp * multiplier
   document.getElementById('points').innerHTML = score
 }
-// detects if the user have enuff points for an upgrade if you do lowers your points then increases points per click by 1 and then increses the price for future upgrades if you dont have enugf points it alerts the user then stops
+// detects if the user have enuff points for an upgrade if you do lowers your points then increases points per click by 1 and then increases the price for future upgrades if you don't have enough  points it alerts the user then stops
 function upgrade () {
   if (score >= upgradeprice) {
     score = score - upgradeprice
@@ -35,10 +35,10 @@ function upgrade () {
     document.getElementById('upprice').innerHTML = upgradeprice
     document.getElementById('points').innerHTML = score
   } else {
-    alert('not enuff clicks!')
+    alert('not enough clicks!')
   }
 }
-// detects if the user have enuff points if you do it multiplies your points per click then increases its price, if you dont have enuff points it alerts the user
+// detects if the user have enough points if you do it multiplies your points per click then increases its price, if you dont have enough points it alerts the user
 function multiply () {
   if (score >= mulprice) {
     score = score - mulprice
@@ -48,10 +48,10 @@ function multiply () {
     document.getElementById('mulprice').innerHTML = mulprice
     document.getElementById('points').innerHTML = score
   } else {
-    alert('not enuff clicks!')
+    alert('not enough clicks!')
   }
 }
-// detects if the user has enuff points if yes shows the end screen, if not alerts the user
+// detects if the user has enough points if yes shows the end screen, if not alerts the user
 function win () {
   if (score >= 5000) {
     score = score - 5000
@@ -69,10 +69,10 @@ function cap () {
     document.getElementById('cap').innerHTML = capacity
     document.getElementById('capprice').innerHTML = capacity
   } else {
-    alert('not enuff clicks!')
+    alert('not enough clicks!')
   }
 }
-// a loop that constantly cheks if the score is over the capacity and doesent allow you to go above your capacity
+// a loop that constantly checks if the score is over the capacity and does not allow you to go above your capacity
 function capcheck () {
   let i = 0
   for (i = 0; i < 1; i++) {
