@@ -74,6 +74,7 @@ function cap () {
 }
 // a loop that constantly cheks if the score is over the capacity and doesent allow you to go above your capacity
 function capcheck () {
+  let i = 0
   for (i = 0; i < 1; i++) {
     if (score > capacity) {
       score = capacity
