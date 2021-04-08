@@ -24,7 +24,7 @@ function clicked () {
   score = score + cp * multiplier
   document.getElementById('points').innerHTML = score
 }
-// detects if the user have enuff points for an upgrade if you do lowers your points then increases points per click by 1 and then increases the price for future upgrades if you don't have enough  points it alerts the user then stops
+// detects if the user have enough points for an upgrade if you do lowers your points then increases points per click by 1 and then increases the price for future upgrades if you don't have enough  points it alerts the user then stops
 function upgrade () {
   if (score >= upgradeprice) {
     score = score - upgradeprice
